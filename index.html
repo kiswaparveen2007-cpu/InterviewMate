@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interview Mate | AI Career Preparation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div class="login-page" id="loginPage">
+
+        <!-- Decorative background -->
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="circle circle-three"></div>
+
+
+        <div class="login-wrapper">
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <div class="login-left">
+
+                <div class="brand">
+                    <div class="brand-icon">IM</div>
+
+                    <span>Interview<span>Mate</span></span>
+                </div>
+
+
+                <div class="hero-content">
+
+                    <div class="ai-label">
+                        <span class="pulse-dot"></span>
+                        AI-POWERED CAREER PREPARATION
+                    </div>
+
+
+                    <h1>
+                        Prepare smarter.<br>
+                        <span>Succeed better.</span>
+                    </h1>
+
+
+                    <p>
+                        Practice aptitude, coding and HR interviews
+                        with an intelligent platform designed to
+                        prepare you for your dream career.
+                    </p>
+
+
+                    <div class="feature-list">
+
+                        <div class="feature">
+                            <div class="feature-icon">🧠</div>
+
+                            <div>
+                                <h3>AI Aptitude</h3>
+                                <p>Adaptive questions & instant feedback</p>
+                            </div>
+                        </div>
+
+
+                        <div class="feature">
+                            <div class="feature-icon">💻</div>
+
+                            <div>
+                                <h3>AI Coding</h3>
+                                <p>Practice real programming problems</p>
+                            </div>
+                        </div>
+
+
+                        <div class="feature">
+                            <div class="feature-icon">🎤</div>
+
+                            <div>
+                                <h3>AI HR Interview</h3>
+                                <p>Practice interviews with AI feedback</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="left-footer">
+                    <span>© 2026 Interview Mate</span>
+                    <span>•</span>
+                    <span>Built for future professionals</span>
+                </div>
+
+            </div>
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <div class="login-right">
+
+                <div class="login-card">
+
+                    <div class="welcome-icon">
+                        👋
+                    </div>
+
+
+                    <div class="login-heading">
+
+                        <h2>Welcome back!</h2>
+
+                        <p>
+                            Start your journey towards placement success.
+                        </p>
+
+                    </div>
+
+
+                    <form onsubmit="event.preventDefault(); login();">
+
+                        <div class="input-group">
+
+                            <label>Your Name</label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">👤</span>
+
+                                <input
+                                    type="text"
+                                    id="username"
+                                    placeholder="Enter your name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Email Address</label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">✉️</span>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="login-button">
+
+                            <span>Continue to Interview Mate</span>
+
+                            <span class="arrow">→</span>
+
+                        </button>
+                        <div class="or-divider">
+    <span>OR CONTINUE WITH</span>
+</div>
+
+<div class="social-login">
+
+    <button
+        type="button"
+        class="social-btn"
+        onclick="googleLogin()">
+
+        <span class="google-logo">G</span>
+        <span>Continue with Google</span>
+
+    </button>
+
+
+    <button
+        type="button"
+        class="social-btn"
+        onclick="appleLogin()">
+
+        <span class="apple-logo">●</span>
+        <span>Continue with Apple</span>
+
+    </button>
+
+</div>
+
+                    </form>
+
+
+                    <div class="login-divider">
+                        <span>YOUR PLACEMENT JOURNEY STARTS HERE</span>
+                    </div>
+
+
+                    <div class="trust-section">
+
+                        <div>
+                            <strong>3</strong>
+                            <span>AI Modules</span>
+                        </div>
+
+                        <div class="vertical-line"></div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>Practice</span>
+                        </div>
+
+                        <div class="vertical-line"></div>
+
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Access</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <div class="dashboard" id="dashboard">
+
+        <header>
+
+            <h2>Interview Mate</h2>
+
+            <button class="logout" onclick="logout()">
+                Logout
+            </button>
+
+        </header>
+
+
+        <div class="welcome">
+
+            <h1>
+                Welcome, <span id="studentName"></span> 👋
+            </h1>
+
+            <p>
+                Prepare for placements with AI-powered assessments.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>🧠 AI Aptitude</h2>
+
+                <p>
+                    Practice quantitative aptitude, logical reasoning
+                    and verbal ability with AI-powered assessment.
+                </p>
+
+                <button onclick="startAIAptitude()">
+                    Start Assessment
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>💻 AI Coding</h2>
+
+                <p>
+                    Solve programming problems generated and evaluated
+                    by the AI Coding Agent.
+                </p>
+
+                <button onclick="startAICoding()">
+                    Start Coding
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>🤖 AI HR Interview</h2>
+
+                <p>
+                    Practice HR interviews with an AI interviewer
+                    and receive personalized feedback.
+                </p>
+
+                <button onclick="startAIInterview()">
+                    Start Interview
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div>
+                <h3 id="testsCompleted">0</h3>
+                <p>Tests Completed</p>
+            </div>
+
+            <div>
+                <h3 id="averageScore">0%</h3>
+                <p>Average Score</p>
+            </div>
+
+            <div>
+                <h3 id="interviewAttempts">0</h3>
+                <p>Interview Attempts</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AI APTITUDE ================= -->
+
+    <div class="ai-page" id="aptitudePage">
+
+        <div class="ai-header">
+
+            <div>
+                <h2>🧠 AI Aptitude Assessment</h2>
+                <p>AI-powered adaptive aptitude test</p>
+            </div>
+
+            <button onclick="exitAptitude()">Exit</button>
+
+        </div>
+
+
+        <div class="assessment-container">
+
+            <div class="ai-badge">
+                🤖 AI Question Generator
+            </div>
+
+            <div class="question-card">
+
+                <div class="question-top">
+
+                    <span>
+                        Question
+                        <span id="aptitudeNumber">1</span>
+                        of 5
+                    </span>
+
+                    <span class="difficulty" id="difficulty">
+                        Easy
+                    </span>
+
+                </div>
+
+
+                <h2 id="aptitudeQuestion">
+                    Loading AI question...
+                </h2>
+
+
+                <div id="aptitudeOptions"></div>
+
+
+                <button
+                    class="submit-answer"
+                    onclick="submitAptitudeAnswer()">
+
+                    Submit Answer
+
+                </button>
+
+
+                <div id="aptitudeFeedback"></div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div id="aptitudeProgress"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AI CODING ================= -->
+
+    <div class="ai-page" id="codingPage">
+
+        <div class="ai-header">
+
+            <div>
+                <h2>💻 AI Coding Assessment</h2>
+                <p>AI-generated programming challenge</p>
+            </div>
+
+            <button onclick="exitCoding()">Exit</button>
+
+        </div>
+
+
+        <div class="coding-container">
+
+            <div class="ai-badge">
+                🤖 AI Coding Agent
+            </div>
+
+            <div class="coding-card">
+
+                <div class="coding-top">
+
+                    <span>
+                        Problem
+                        <span id="codingNumber">1</span>
+                        of 3
+                    </span>
+
+                    <span
+                        class="difficulty"
+                        id="codingDifficulty">
+
+                        Easy
+
+                    </span>
+
+                </div>
+
+
+                <h2 id="codingTitle">
+                    Loading coding problem...
+                </h2>
+
+
+                <p id="codingDescription"></p>
+
+
+                <h3>Example</h3>
+
+                <pre id="codingExample"></pre>
+
+
+                <h3>Your Solution</h3>
+
+                <textarea
+                    id="codeEditor"
+                    placeholder="Write your Python code here...">
+                </textarea>
+
+
+                <button
+                    class="submit-answer"
+                    onclick="submitCoding()">
+
+                    Run & Evaluate Code
+
+                </button>
+
+
+                <div id="codingFeedback"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AI HR ================= -->
+
+    <div class="ai-page" id="aiPage">
+        <div class="ai-header">
+
+        <div>
+            <h2>🤖 AI HR Interview</h2>
+            <p>Personalized AI-powered interview</p>
+        </div>
+
+        <button onclick="exitAIInterview()">
+            Exit
+        </button>
+
+    </div>
+
+
+    <div class="interview-container">
+
+        <!-- AI INTERVIEWER -->
+
+        <div class="ai-intro">
+
+            <div class="bot-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <h3>Interview Mate AI</h3>
+
+                <p>
+                    Your personal AI interviewer
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAT -->
+
+        <div
+            class="chat-box"
+            id="chatBox">
+
+        </div>
+
+
+        <!-- TYPING AREA -->
+
+        <div class="answer-area">
+
+            <textarea
+                id="userAnswer"
+                placeholder="Type your answer here...">
+            </textarea>
+
+
+            <button
+                onclick="submitAIAnswer()">
+
+                Send Answer →
+
+            </button>
+
+        </div>
+
+
+        <div class="interview-progress">
+
+            AI Interview
+
+            <span id="aiQuestionNumber">
+                1
+            </span>
+
+        </div>
+
+        <div class="ai-header">
+
+            <div>
+
+                <h2>🤖 AI HR Interview</h2>
+
+                <p>Personalized AI interview practice</p>
+
+            </div>
+
+            <button onclick="exitAIInterview()">
+                Exit
+            </button>
+
+        </div>
+
+
+        <div class="interview-container">
+
+            <div class="ai-intro">
+
+                <div class="bot-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>AI Interviewer</h3>
+
+                    <p>
+                        I will ask you HR questions and
+                        evaluate your responses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-box" id="chatBox"></div>
+
+
+            <div class="answer-area">
+
+                <textarea
+                    id="userAnswer"
+                    placeholder="Type your answer here...">
+                </textarea>
+
+
+                <button onclick="submitAIAnswer()">
+                    Submit Answer
+                </button>
+
+            </div>
+
+
+            <div class="interview-progress">
+
+                Question
+                <span id="aiQuestionNumber">1</span>
+                of 5
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESULT ================= -->
+
+    <div class="result-page" id="resultPage">
+
+        <div class="result-box">
+
+            <h1>Assessment Completed 🎉</h1>
+
+            <h2>Your Score</h2>
+
+            <div class="score" id="score">
+                0%
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <button onclick="backToDashboard()">
+                Back to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
